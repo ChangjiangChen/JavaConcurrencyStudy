@@ -14,7 +14,7 @@ public class Singletons {
         }
     }
 
-    //懒汉式
+    //懒汉式，注意普通的双判空模式中可能出现的问题
     static class Singleton2 {
 
         private static volatile Singleton2 instance;
@@ -53,7 +53,7 @@ public class Singletons {
         private Singleton4() {
         }
 
-        private enum Singleton {
+        private enum SingletonEnum {
             INSTANCE;
 
             private final Singleton4 instance;
