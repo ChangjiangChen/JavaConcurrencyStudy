@@ -1,0 +1,21 @@
+多线程的基础知识点（此处不用代码做总结）：
+1.实现一个线程，必须创建Tread实例，override其中的run方法，并且调用start方法
+    这里提一下override与overload的区别：override是重写，发生于父类和子类之间，覆盖基类方法逻辑，强烈建议使用@Override进行标记；
+    而overload是重载，与参数变化有关，发生于父类和子类以及同类之间
+2.当JVM启动后，实际上有多个线程，但是至少有一个非守护线程（main）
+3.当你调用一个线程start方法的时候，此时至少有两个线程，一个调用你的线程，一个是执行线程
+4.线程的生命周分为new,runnable,running,block,terminated
+
+-----------------------------------------------------------------------------
+以下是Thread类中，关于线程的描述（日常不太关注的地方）
+
+任何一个线程都可能被标记为守护线程
+Each thread may or may not also be marked as a daemon.
+关于子线程与父线程的优先级问题
+When code running in some thread creates a new Thread object,
+the new thread has its priority initially set equal to the priority of the creating thread,
+子线程是否为守护线程
+and is a daemon thread if and only if the creating thread is a daemon.
+
+When a Java Virtual Machine starts up,
+there is usually a single non-daemon thread (which typically calls the method named main).

@@ -34,7 +34,7 @@ public class Singletons {
         }
     }
 
-    //内部类解决懒启动与重排序的问题
+    //内部类解决懒启动与重排序的问题，静态内部类只有在使用时才会被加载
     static class Singleton3 {
         private Singleton3() {
         }
@@ -58,7 +58,7 @@ public class Singletons {
 
             private final Singleton4 instance;
 
-            Singleton() {
+            SingletonEnum() {
                 instance = new Singleton4();
             }
 
@@ -68,7 +68,7 @@ public class Singletons {
         }
 
         public static Singleton4 getInstance() {
-            return Singleton.INSTANCE.getInstance();
+            return SingletonEnum.INSTANCE.getInstance();
         }
     }
 
