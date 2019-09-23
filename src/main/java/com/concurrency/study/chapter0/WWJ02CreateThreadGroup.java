@@ -2,7 +2,7 @@ package com.concurrency.study.chapter0;
 
 import java.util.Arrays;
 
-public class CreateThreadGroup {
+public class WWJ02CreateThreadGroup {
 
     public static void main(String[] args) {
         Thread t = new Thread();
