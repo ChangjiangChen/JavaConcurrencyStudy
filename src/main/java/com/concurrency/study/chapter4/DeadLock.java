@@ -43,7 +43,7 @@ public class DeadLock {
     }
 
     /**
-     * 死锁的检测
+     * 死锁的检测（DOS环境下）
      *
      * PS C:\Users\Administrator> jps
      * 11732 Launcher
