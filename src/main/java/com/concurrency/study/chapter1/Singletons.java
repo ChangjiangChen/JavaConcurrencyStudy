@@ -1,5 +1,6 @@
 package com.concurrency.study.chapter1;
 
+
 public class Singletons {
 
     //饿汉式
