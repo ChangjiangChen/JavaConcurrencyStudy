@@ -14,7 +14,13 @@ public class Main {
                 }
             }
         });
-        threadService.shutdown(5000);
-//        threadService.shutdown(20000);
+        /**
+         * 如果任务的执行时间比shutdown的长，那么任务会被打断
+         */
+        //        threadService.shutdown(5000);
+        /**
+         * 如果任务的执行时间比shutdown短，那么结束时刻整个App就回退出
+         */
+        //        threadService.shutdown(20000);
     }
 }
